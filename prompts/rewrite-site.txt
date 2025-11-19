@@ -221,17 +221,23 @@ OUTPUT FORMAT
 
 Return JSON keyed by page id ("home", "service-{{slug}}", "contact").
 
-Each value is an object whose keys exactly match the template field identifiers supplied by the bot.
+CRITICAL: Look at the TEMPLATE_FIELDS section below to see the exact field keys you must use. Each value is an object whose keys MUST EXACTLY MATCH the field keys provided in TEMPLATE_FIELDS. Do not create your own keys or modify the keys. Use the exact keys as they appear in TEMPLATE_FIELDS.
 
-Example:
+The structure is:
+{
+  "page_id": {
+    "exact_field_key_from_template_fields": "your generated copy here",
+    "another_exact_field_key": "your generated copy here"
+  }
+}
+
+Example structure (your actual keys will be different and must match TEMPLATE_FIELDS exactly):
 
 {
   "home": {
-    "hero.eyebrow": "...",
-    "hero.headline": "...",
-    "hero.subheadline": "...",
-    "hero.primaryCtaLabel": "...",
-    "hero.secondaryCtaLabel": "...",
+    "write_a_compelling_h1_headline": "Trusted Towing & Roadside Assistance in Denver, CO",
+    "write_a_short_badge_text": "Available 24/7 • Fast Response",
+    "write_a_high_converting_call_to_action": "Call Now",
     "...": "..."
   },
   "service-jump-start": {
@@ -242,15 +248,22 @@ Example:
   }
 }
 
+IMPORTANT: 
+- Use the EXACT field keys from TEMPLATE_FIELDS - do not change, modify, or create new keys
+- Every key in TEMPLATE_FIELDS must have a corresponding value in your response
+- The keys are case-sensitive and must match exactly
+
 VALIDATION REQUIREMENTS (DO NOT SKIP)
 
 Before responding, you MUST ensure:
 
-Every field from TEMPLATE_FIELDS exists in your JSON response.
+Every field key from TEMPLATE_FIELDS exists in your JSON response with the EXACT same key name.
 
-No missing keys.
+No missing keys - every key in TEMPLATE_FIELDS must have a corresponding entry in your response.
 
-If a field exists in TEMPLATE_FIELDS, it must be included in the JSON with final copy.
+No extra keys - do not add keys that are not in TEMPLATE_FIELDS.
+
+If a field exists in TEMPLATE_FIELDS, it must be included in the JSON with final copy using the exact same key name (case-sensitive).
 
 No prompt text remains.
 
