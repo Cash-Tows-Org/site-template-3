@@ -129,17 +129,51 @@ That the service is local to {{SERVICE_AREA}}
 
 That emergencies are welcome and expected.
 
+READING LEVEL REQUIREMENTS
+
+Write at a 7th-8th grade reading level to ensure accessibility for all visitors.
+
+Use:
+
+Simple, clear language
+
+Short sentences (12-18 words average)
+
+Common, everyday words
+
+Avoid:
+
+Jargon and technical terms
+
+Complex sentence structures
+
+Unnecessary words
+
+TONE REQUIREMENTS
+
+Write with a friendly, local, helpful vibe that sounds like a trusted neighbor.
+
+Use:
+
+"We" and "you" for connection
+
+Warm and approachable language
+
+Genuine care and concern
+
+Show understanding of customer stress and urgency
+
 GENERAL RULES
 
 Do not change layout or HTML structure.
 
-Only replace the text strings that contain “Prompt”.
+Only replace the text strings that contain "Prompt".
 
 Each prompt label must become final customer-ready copy:
 
 No instructions
 
-No “Prompt:” wording
+No "Prompt:" wording
 
 No placeholders or curly braces except provided values (e.g., {{PHONE}}).
 
@@ -147,9 +181,9 @@ Mention {{SERVICE_AREA}} and relevant services naturally for SEO; avoid keyword 
 
 CTA labels must be:
 
-Action-oriented (e.g., “Call {{PHONE}} Now”, “Request a Jump Start in {{SERVICE_AREA}}”)
+Action-oriented (e.g., "Call {{PHONE}} Now", "Request a Jump Start in {{SERVICE_AREA}}")
 
-Consistent with the page’s primary action (usually phone call).
+Consistent with the page's primary action (usually phone call).
 
 Use:
 
