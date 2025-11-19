@@ -266,6 +266,32 @@
     </div>
   </section>
 
+  <!-- Map Section -->
+  <section class="map-section">
+    <div class="container">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="section-title text-center mb-4">
+          {{PROMPT: Write an H2 for map section (e.g., 'Find Us', 'Our Location', 'Service Area Map').}}
+        </h2>
+        <p class="text-center text-gray-600 mb-8">
+          {{PROMPT: Write a map description mentioning service coverage (e.g., 'Serving {{CITY}} and surrounding areas with fast, reliable roadside assistance').}}
+        </p>
+        <div class="map-wrapper">
+          <div id="map"></div>
+          <div class="map-cta">
+            <a href="https://www.google.com/maps/search/?api=1&query={{CITY}}+{{STATE}}" target="_blank" class="map-cta-button">
+              <svg class="map-cta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+              {{PROMPT: Write CTA text for getting directions (e.g., 'Get Directions', 'Open in Google Maps').}}
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Footer (same as index) -->
   <footer class="footer">
     <div class="footer-container">
@@ -347,6 +373,63 @@
     </div>
   </footer>
 
+  <!-- Google Maps API -->
+  <script src="https://maps.googleapis.com/maps/api/js?key={{GOOGLE_MAPS_API_KEY}}&libraries=places"></script>
+  <script>
+      // Initialize Google Map centered on the service city
+      function initMap() {
+          const city = '{{CITY}}';
+          const state = '{{STATE}}';
+          const locationQuery = state ? `${city}, ${state}` : city;
+          
+          // Use Geocoding API to get coordinates for the city
+          const geocoder = new google.maps.Geocoder();
+          
+          geocoder.geocode({ address: locationQuery }, function(results, status) {
+              if (status === 'OK' && results[0]) {
+                  const location = results[0].geometry.location;
+                  
+                  const map = new google.maps.Map(document.getElementById('map'), {
+                      center: location,
+                      zoom: 12,
+                      styles: [
+                          {
+                              featureType: 'poi',
+                              elementType: 'labels',
+                              stylers: [{ visibility: 'off' }]
+                          }
+                      ]
+                  });
+                  
+                  // Add a marker for the city center
+                  new google.maps.Marker({
+                      position: location,
+                      map: map,
+                      title: `Service Area: ${locationQuery}`
+                  });
+              } else {
+                  // Fallback: try to use a default location if geocoding fails
+                  console.warn('Geocoding failed, using default location');
+                  const map = new google.maps.Map(document.getElementById('map'), {
+                      center: { lat: 39.7392, lng: -104.9903 }, // Default to Denver
+                      zoom: 10
+                  });
+              }
+          });
+      }
+      
+      // Initialize map when page loads
+      if (typeof google !== 'undefined' && google.maps) {
+          initMap();
+      } else {
+          // Wait for Google Maps API to load
+          window.addEventListener('load', function() {
+              if (typeof google !== 'undefined' && google.maps) {
+                  initMap();
+              }
+          });
+      }
+  </script>
   <script src="script.js"></script>
 </body>
 </html>
