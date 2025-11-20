@@ -39,6 +39,12 @@
           --accent-color: {{ACCENT_COLOR}};
       }
       
+      /* Override CSS variables with actual color values after token replacement */
+      body {
+          --primary-color: {{PRIMARY_COLOR}};
+          --accent-color: {{ACCENT_COLOR}};
+      }
+      
       /* Ensure SVG icons don't take full screen */
       .map-cta-icon {
           width: 1.25rem;
@@ -258,8 +264,8 @@
               <path d="M1 3h15v13H1zM16 8h4l3 3v5h-7V8z" />
             </svg>
           </div>
-          <h3 class="service-title">{{PROMPT: Write first service name.}}</h3>
-          <p class="service-description">{{PROMPT: Write description for first service emphasizing availability and professionalism. Use different phrasing than service descriptions on other pages.}}</p>
+          <h3 class="service-title">{{PROMPT: Write the first included service name from the services list. This should match one of the actual services offered (e.g., "Jump Start", "Fuel Delivery", "Lockout", "Tire Change").}}</h3>
+          <p class="service-description">{{PROMPT: Write a compelling 2-3 sentence description for the first service that emphasizes fast response time in {{CITY}}, 24/7 availability, professional technicians, and how this service solves common customer problems. Include the city name and make it conversion-focused. Use different phrasing than service descriptions on other pages.}}</p>
         </div>
 
         <div class="service-card">
@@ -269,8 +275,8 @@
               <path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16" />
             </svg>
           </div>
-          <h3 class="service-title">{{PROMPT: Write second service name.}}</h3>
-          <p class="service-description">{{PROMPT: Write description for second service emphasizing quick response. Use different phrasing than service descriptions on other pages.}}</p>
+          <h3 class="service-title">{{PROMPT: Write the second included service name from the services list. This should match one of the actual services offered (e.g., "Jump Start", "Fuel Delivery", "Lockout", "Tire Change").}}</h3>
+          <p class="service-description">{{PROMPT: Write a compelling 2-3 sentence description for the second service that emphasizes quick arrival time in {{CITY}}, affordable pricing, reliable equipment, and customer satisfaction. Include the city name and make it conversion-focused. Use different phrasing than service descriptions on other pages.}}</p>
         </div>
 
         <div class="service-card">
@@ -280,8 +286,8 @@
               <path d="M12 6v6l4 2" />
             </svg>
           </div>
-          <h3 class="service-title">{{PROMPT: Write third service name.}}</h3>
-          <p class="service-description">{{PROMPT: Write description for third service emphasizing on-the-spot service. Use different phrasing than service descriptions on other pages.}}</p>
+          <h3 class="service-title">{{PROMPT: Write the third included service name from the services list. This should match one of the actual services offered (e.g., "Jump Start", "Fuel Delivery", "Lockout", "Tire Change"). If only two services are included, write a relevant third service name.}}</h3>
+          <p class="service-description">{{PROMPT: Write a compelling 2-3 sentence description for the third service that emphasizes same-day service in {{CITY}}, experienced local technicians, and peace of mind. Include the city name and make it conversion-focused. Use different phrasing than service descriptions on other pages.}}</p>
         </div>
 
         <div class="service-card">
@@ -291,8 +297,8 @@
               <circle cx="12" cy="10" r="3" />
             </svg>
           </div>
-          <h3 class="service-title">{{PROMPT: Write fourth service name.}}</h3>
-          <p class="service-description">{{PROMPT: Write description for fourth service emphasizing damage-free service. Use different phrasing than service descriptions on other pages.}}</p>
+          <h3 class="service-title">{{PROMPT: Write the fourth included service name from the services list, or a relevant fourth service if only three are included. This should match one of the actual services offered or be a complementary service.}}</h3>
+          <p class="service-description">{{PROMPT: Write a compelling 2-3 sentence description for the fourth service that emphasizes local expertise in {{CITY}}, damage-free service, and trusted reputation. Include the city name and make it conversion-focused. Use different phrasing than service descriptions on other pages.}}</p>
         </div>
 
         <div class="service-card">
@@ -301,8 +307,8 @@
               <path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6" />
             </svg>
           </div>
-          <h3 class="service-title">{{PROMPT: Write fifth service name.}}</h3>
-          <p class="service-description">{{PROMPT: Write description for fifth service emphasizing convenience. Use different phrasing than service descriptions on other pages.}}</p>
+          <h3 class="service-title">{{PROMPT: Write the fifth included service name from the services list, or a relevant fifth service. This should match one of the actual services offered or be a complementary service.}}</h3>
+          <p class="service-description">{{PROMPT: Write a compelling 2-3 sentence description for the fifth service that emphasizes transparent pricing in {{CITY}}, no hidden fees, and convenient scheduling. Include the city name and make it conversion-focused. Use different phrasing than service descriptions on other pages.}}</p>
         </div>
 
         <div class="service-card">
@@ -311,8 +317,8 @@
               <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
             </svg>
           </div>
-          <h3 class="service-title">{{PROMPT: Write sixth service name.}}</h3>
-          <p class="service-description">{{PROMPT: Write description for sixth service emphasizing professional handling. Use different phrasing than service descriptions on other pages.}}</p>
+          <h3 class="service-title">{{PROMPT: Write the sixth included service name from the services list, or a relevant sixth service. This should match one of the actual services offered or be a complementary service.}}</h3>
+          <p class="service-description">{{PROMPT: Write a compelling 2-3 sentence description for the sixth service that emphasizes licensed and insured service in {{CITY}}, customer-first approach, and proven track record. Include the city name and make it conversion-focused. Use different phrasing than service descriptions on other pages.}}</p>
         </div>
       </div>
 
@@ -644,18 +650,18 @@
                 <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
               </svg>
             </div>
-            <div class="footer-brand-text">
+              <div class="footer-brand-text">
               <div class="footer-brand-name">{{BUSINESS_NAME}}</div>
-              <div class="footer-brand-tagline">{{PROMPT: Write a short tagline (3-5 words).}}</div>
+              <div class="footer-brand-tagline">{{PROMPT: Write a short, memorable tagline for {{BUSINESS_NAME}} (3-5 words) that emphasizes speed, reliability, or local service (e.g., "Fast. Reliable. Local.", "Your Trusted Roadside Partner", "24/7 Emergency Service").}}</div>
             </div>
           </div>
           <p class="footer-brand-description">
-            {{PROMPT: Write footer description about being a trusted partner for emergency towing and roadside assistance.}}
+            {{PROMPT: Write a 1-2 sentence footer description about {{BUSINESS_NAME}} being a trusted partner for emergency towing and roadside assistance in {{CITY}}. Emphasize reliability, local expertise, and customer commitment.}}
           </p>
         </div>
 
         <div class="footer-links">
-          <h4 class="footer-links-title">{{PROMPT: Write footer section title.}}</h4>
+          <h4 class="footer-links-title">{{PROMPT: Write footer section title for navigation links (e.g., "Quick Links", "Navigation", "Site Map", "Pages").}}</h4>
           <ul class="footer-links-list">
             <li><a href="index.html" class="footer-link">Home</a></li>
             <li><a href="services/service-template.html" class="footer-link">Services</a></li>
@@ -664,26 +670,26 @@
         </div>
 
         <div class="footer-services">
-          <h4 class="footer-services-title">{{PROMPT: Write footer section title.}}</h4>
+          <h4 class="footer-services-title">{{PROMPT: Write footer section title for services (e.g., "Our Services", "Services We Offer", "Available Services").}}</h4>
           <ul class="footer-services-list">
-            <li>{{PROMPT: Write service 1 name.}}</li>
-            <li>{{PROMPT: Write service 2 name.}}</li>
-            <li>{{PROMPT: Write service 3 name.}}</li>
-            <li>{{PROMPT: Write service 4 name.}}</li>
-            <li>{{PROMPT: Write service 5 name.}}</li>
-            <li>{{PROMPT: Write service 6 name.}}</li>
+            <li>{{PROMPT: Write the first included service name from the services list (e.g., "Jump Start", "Fuel Delivery", "Lockout").}}</li>
+            <li>{{PROMPT: Write the second included service name from the services list (e.g., "Jump Start", "Fuel Delivery", "Lockout").}}</li>
+            <li>{{PROMPT: Write the third included service name from the services list, or a relevant third service if only two are included.}}</li>
+            <li>{{PROMPT: Write the fourth included service name from the services list, or a relevant fourth service.}}</li>
+            <li>{{PROMPT: Write the fifth included service name from the services list, or a relevant fifth service.}}</li>
+            <li>{{PROMPT: Write the sixth included service name from the services list, or a relevant sixth service.}}</li>
           </ul>
         </div>
 
         <div class="footer-contact">
-          <h4 class="footer-contact-title">{{PROMPT: Write footer section title.}}</h4>
+          <h4 class="footer-contact-title">{{PROMPT: Write footer section title for contact information (e.g., "Contact Us", "Get in Touch", "Reach Out", "Contact Information").}}</h4>
           <div class="footer-contact-info">
             <div class="footer-contact-item">
               <svg class="footer-contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                 <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
               </svg>
               <div class="footer-contact-details">
-                <div class="footer-contact-label">{{PROMPT: Write contact label.}}</div>
+                <div class="footer-contact-label">{{PROMPT: Write contact label for phone (e.g., "Call Us", "Phone", "Emergency Line", "24/7 Hotline").}}</div>
                 <a href="tel:{{PHONE_NUMBER}}" class="footer-contact-value">{{PHONE_NUMBER}}</a>
               </div>
             </div>
@@ -693,7 +699,7 @@
                 <polyline points="22,6 12,13 2,6" />
               </svg>
               <div class="footer-contact-details">
-                <div class="footer-contact-label">{{PROMPT: Write contact label.}}</div>
+                <div class="footer-contact-label">{{PROMPT: Write contact label for email (e.g., "Email Us", "Email", "Send a Message", "Contact Email").}}</div>
                 <a href="mailto:{{EMAIL}}" class="footer-contact-value">{{EMAIL}}</a>
               </div>
             </div>
@@ -703,12 +709,12 @@
 
       <div class="footer-bottom">
         <p class="footer-copyright">
-          © <span id="current-year"></span> {{BUSINESS_NAME}}. {{PROMPT: Write copyright text.}}
+          © <span id="current-year"></span> {{BUSINESS_NAME}}. {{PROMPT: Write copyright text (e.g., "All Rights Reserved.", "All rights reserved.", "Protected by copyright.").}}
         </p>
         <div class="footer-legal">
-          <a href="#" class="footer-legal-link">{{PROMPT: Write legal link.}}</a>
-          <a href="#" class="footer-legal-link">{{PROMPT: Write legal link.}}</a>
-          <a href="#" class="footer-legal-link">{{PROMPT: Write legal link.}}</a>
+          <a href="#" class="footer-legal-link">{{PROMPT: Write first legal link text (e.g., "Privacy Policy", "Terms of Service", "Disclaimer").}}</a>
+          <a href="#" class="footer-legal-link">{{PROMPT: Write second legal link text (e.g., "Privacy Policy", "Terms of Service", "Disclaimer").}}</a>
+          <a href="#" class="footer-legal-link">{{PROMPT: Write third legal link text (e.g., "Privacy Policy", "Terms of Service", "Sitemap", "Disclaimer").}}</a>
         </div>
       </div>
     </div>
