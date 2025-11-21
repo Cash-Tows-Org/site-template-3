@@ -129,6 +129,40 @@ That the service is local to {{SERVICE_AREA}}
 
 That emergencies are welcome and expected.
 
+READING LEVEL REQUIREMENTS
+
+Write at a 7th-8th grade reading level to ensure accessibility for all visitors.
+
+Use:
+
+Simple, clear language
+
+Short sentences (12-18 words average)
+
+Common, everyday words
+
+Avoid:
+
+Jargon and technical terms
+
+Complex sentence structures
+
+Unnecessary words
+
+TONE REQUIREMENTS
+
+Write with a friendly, local, helpful vibe that sounds like a trusted neighbor.
+
+Use:
+
+"We" and "you" for connection
+
+Warm and approachable language
+
+Genuine care and concern
+
+Show understanding of customer stress and urgency
+
 GENERAL RULES
 
 Do not change layout or HTML structure.
@@ -155,31 +189,9 @@ Use:
 
 American English
 
-7th-8th grade reading level:
-
-Write in simple, clear language that anyone can understand
-
-Use short sentences (12-18 words average)
-
-Avoid jargon, technical terms, and complex vocabulary
-
-Use common, everyday words (e.g., "help" not "assistance", "fast" not "expeditious")
-
-Break up long thoughts into multiple short sentences
-
 Concise sentences
 
 Tone: professional, confident, and as urgent as is natural for roadside, while matching {{BRAND_VOICE}}.
-
-Friendly, local, and helpful vibe:
-
-Sound like a trusted neighbor, not a corporate entity
-
-Use "we" and "you" to create connection
-
-Be warm and approachable while maintaining professionalism
-
-Show genuine care for the customer's stressful situation
 
 When a field asks for a value or headline with constraints (word count, character limit, content requirements), obey those constraints exactly.
 
@@ -209,19 +221,23 @@ OUTPUT FORMAT
 
 Return JSON keyed by page id ("home", "service-{{slug}}", "contact").
 
-CRITICAL: You MUST include ALL page IDs that appear in TEMPLATE_FIELDS. Every page ID in TEMPLATE_FIELDS must have a corresponding entry in your JSON response. Do not skip any pages.
+CRITICAL: Look at the TEMPLATE_FIELDS section below to see the exact field keys you must use. Each value is an object whose keys MUST EXACTLY MATCH the field keys provided in TEMPLATE_FIELDS. Do not create your own keys or modify the keys. Use the exact keys as they appear in TEMPLATE_FIELDS.
 
-Each value is an object whose keys exactly match the template field identifiers supplied by the bot.
+The structure is:
+{
+  "page_id": {
+    "exact_field_key_from_template_fields": "your generated copy here",
+    "another_exact_field_key": "your generated copy here"
+  }
+}
 
-Example:
+Example structure (your actual keys will be different and must match TEMPLATE_FIELDS exactly):
 
 {
   "home": {
-    "hero.eyebrow": "...",
-    "hero.headline": "...",
-    "hero.subheadline": "...",
-    "hero.primaryCtaLabel": "...",
-    "hero.secondaryCtaLabel": "...",
+    "write_a_compelling_h1_headline": "Trusted Towing & Roadside Assistance in Denver, CO",
+    "write_a_short_badge_text": "Available 24/7 • Fast Response",
+    "write_a_high_converting_call_to_action": "Call Now",
     "...": "..."
   },
   "service-jump-start": {
@@ -232,21 +248,22 @@ Example:
   }
 }
 
+IMPORTANT: 
+- Use the EXACT field keys from TEMPLATE_FIELDS - do not change, modify, or create new keys
+- Every key in TEMPLATE_FIELDS must have a corresponding value in your response
+- The keys are case-sensitive and must match exactly
+
 VALIDATION REQUIREMENTS (DO NOT SKIP)
 
 Before responding, you MUST ensure:
 
-ALL page IDs from TEMPLATE_FIELDS are present in your JSON response. Every page must be included.
+Every field key from TEMPLATE_FIELDS exists in your JSON response with the EXACT same key name.
 
-Every field from TEMPLATE_FIELDS exists in your JSON response.
+No missing keys - every key in TEMPLATE_FIELDS must have a corresponding entry in your response.
 
-No missing keys.
+No extra keys - do not add keys that are not in TEMPLATE_FIELDS.
 
-No missing pages.
-
-If a page ID exists in TEMPLATE_FIELDS, it must be included in the JSON with all its fields.
-
-If a field exists in TEMPLATE_FIELDS, it must be included in the JSON with final copy.
+If a field exists in TEMPLATE_FIELDS, it must be included in the JSON with final copy using the exact same key name (case-sensitive).
 
 No prompt text remains.
 

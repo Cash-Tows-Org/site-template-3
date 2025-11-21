@@ -32,10 +32,10 @@
   --radius-2xl: 2rem;
   --radius-full: 9999px;
   
-  /* User-selected brand colors (replaces yellow theme) */
-  --yellow-400: {{ACCENT_COLOR}};
-  --yellow-500: {{ACCENT_COLOR}};
-  --yellow-600: {{PRIMARY_COLOR}};
+  /* Yellow theme colors for template v3 */
+  --yellow-400: #facc15;
+  --yellow-500: #eab308;
+  --yellow-600: #ca8a04;
   --blue-400: #60a5fa;
   --blue-500: #3b82f6;
   --blue-600: #2563eb;
