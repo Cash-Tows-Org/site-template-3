@@ -1,10 +1,10 @@
-  <!DOCTYPE html>
-  <html lang="en">
-    <head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{PROMPT: Write an SEO title for homepage under 60 characters (e.g., '{{BUSINESS_NAME}} - Fast Towing in {{CITY}}').}}</title>
-  <meta name="description" content="{{PROMPT: Write a meta description for homepage under 160 characters emphasizing fast response, 24/7 availability, and local service for {{BUSINESS_NAME}} in {{CITY}}.}}">
+  <title>{{PROMPT: Write an SEO title under 60 characters including the service name and city.}}</title>
+  <meta name="description" content="{{PROMPT: Write a meta description under 160 characters emphasizing the service, local coverage, and free quote offer.}}">
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -106,9 +106,9 @@
           background-color: var(--accent-color) !important;
       }
   </style>
-  <link rel="stylesheet" href="assets/css/shared.css">
-  <link rel="stylesheet" href="assets/css/styles.css">
-    </head>
+  <link rel="stylesheet" href="../assets/css/shared.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
 <body>
     <!-- ===== START: HEADER ===== -->
     <header class="bg-accent shadow-lg sticky top-0 z-50">
@@ -119,7 +119,7 @@
             <nav class="hidden md:block">
                 <ul class="flex space-x-10">
                     <li>
-                        <a href="index.html" class="inline-block bg-white/10 backdrop-blur-sm border-2 border-white/30 text-white px-5 py-2.5 rounded-lg font-semibold text-base hover:bg-white hover:text-accent hover:border-white transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-105">
+                        <a href="../index.html" class="inline-block bg-white/10 backdrop-blur-sm border-2 border-white/30 text-white px-5 py-2.5 rounded-lg font-semibold text-base hover:bg-white hover:text-accent hover:border-white transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-105">
                             Home
                         </a>
                     </li>
@@ -135,7 +135,7 @@
                         </div>
                     </li>
                     <li>
-                        <a href="contact.html" class="inline-block bg-white/10 backdrop-blur-sm border-2 border-white/30 text-white px-5 py-2.5 rounded-lg font-semibold text-base hover:bg-white hover:text-accent hover:border-white transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-105">
+                        <a href="../contact.html" class="inline-block bg-white/10 backdrop-blur-sm border-2 border-white/30 text-white px-5 py-2.5 rounded-lg font-semibold text-base hover:bg-white hover:text-accent hover:border-white transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-105">
                             Contact
                         </a>
                     </li>
@@ -155,13 +155,13 @@
         <div class="mobile-menu md:hidden bg-accent py-6 px-4 shadow-lg border-t border-accent/20 hidden">
             <ul class="space-y-5">
                 <li>
-                    <a href="index.html" class="block text-white hover:text-white/80 font-medium text-lg transition-colors">
+                    <a href="../index.html" class="block text-white hover:text-white/80 font-medium text-lg transition-colors">
                         Home
                     </a>
                 </li>
                 <!-- MOBILE_SERVICE_MENU_ITEMS -->
                 <li>
-                    <a href="contact.html" class="block text-white hover:text-white/80 font-medium text-lg transition-colors">
+                    <a href="../contact.html" class="block text-white hover:text-white/80 font-medium text-lg transition-colors">
                         Contact
                     </a>
                 </li>
@@ -175,318 +175,94 @@
     </header>
     <!-- ===== END: HEADER ===== -->
 
-  <!-- Hero Section -->
-  <section class="hero-section">
+  <!-- Service Hero Section -->
+  <section class="service-hero">
     <!-- Background Image -->
-    <div class="hero-background">
+    <div class="service-hero-background">
       <!-- Desktop Image -->
-      <img src="{{HERO_PHOTO_URL}}" alt="{{PROMPT: Write alt text for hero image featuring towing/roadside assistance.}}" class="hero-image hidden md:block" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+      <img src="{{SERVICE_HERO_PHOTO_URL_DESKTOP}}" alt="{{PROMPT: Write alt text for service hero image.}}" class="service-hero-image service-hero-image-desktop" onerror="this.style.display='none';">
       <!-- Mobile Image -->
-      <img src="{{HERO_MOBILE_PHOTO_URL}}" alt="{{PROMPT: Write alt text for hero image featuring towing/roadside assistance.}}" class="hero-image md:hidden" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-      <div class="hero-image-fallback" style="display:none;">
-        <div class="hero-fallback-content">
+      <img src="{{SERVICE_HERO_PHOTO_URL_MOBILE}}" alt="{{PROMPT: Write alt text for service hero image.}}" class="service-hero-image service-hero-image-mobile" onerror="this.style.display='none';">
+      <!-- Fallback -->
+      <div class="service-hero-image-fallback" style="display:none;">
+        <div class="service-hero-fallback-content">
           <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODgiIGhlaWdodD0iODgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgc3Ryb2tlPSIjMDAwIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBvcGFjaXR5PSIuMyIgZmlsbD0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIzLjciPjxyZWN0IHg9IjE2IiB5PSIxNiIgd2lkdGg9IjU2IiBoZWlnaHQ9IjU2IiByeD0iNiIvPjxwYXRoIGQ9Im0xNiA1OCAxNi0xOCAzMiAzMiIvPjxjaXJjbGUgY3g9IjUzIiBjeT0iMzUiIHI9IjciLz48L3N2Zz4KCg==" alt="Image placeholder">
         </div>
       </div>
-      <div class="hero-overlay"></div>
+      <div class="service-hero-overlay"></div>
     </div>
 
-    <!-- Hero Content -->
-    <div class="hero-content">
-      <div class="hero-badge">
-        <svg class="hero-badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+    <div class="service-hero-container">
+      <div class="service-hero-badge">
+        <svg class="service-hero-badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
           <circle cx="12" cy="12" r="10" />
           <polyline points="12 6 12 12 16 14" />
         </svg>
-        <span>{{PROMPT: Write a badge text emphasizing 24/7 availability and fast response.}}</span>
+        <span>{{PROMPT: Write a badge text emphasizing 24/7 availability for this service.}}</span>
       </div>
-
-      <h1 class="hero-headline">
-        {{PROMPT: Write a compelling H1 headline that MUST include the business name "{{BUSINESS_NAME}}" and city "{{CITY}}" (e.g., '{{BUSINESS_NAME}} - Your Trusted Towing Service in {{CITY}}' or 'Fast Roadside Assistance in {{CITY}} by {{BUSINESS_NAME}}'). Make it clear, local, and conversion-focused. DO NOT use placeholder text like "Your City" - use the actual city name provided.}}
-      </h1>
-
-      <p class="hero-description">
-        {{PROMPT: Write a compelling 1-2 sentence tagline emphasizing fast, reliable service, affordable rates, and quick response times.}}
+      <h1 class="service-hero-title">{{PROMPT: Write H1 that MUST include the service name "{{SERVICE_NAME}}" and city "{{CITY}}" (e.g., "Expert {{SERVICE_NAME}} in {{CITY}}" or "{{CITY}}'s Trusted {{SERVICE_NAME}}"). DO NOT use placeholder text like "Your City" - use the actual city name provided. Use different wording than H1s on other pages.}}</h1>
+      <p class="service-hero-description">
+        {{PROMPT: Write 2-3 sentences describing the service, emphasizing fast response, professional service, and local coverage in the city. Use different phrasing than service descriptions on other pages.}}
       </p>
-
-      <div class="hero-cta-group">
-        <a href="tel:{{PHONE_NUMBER}}" class="hero-cta-primary">
-          <svg class="hero-cta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+      <div class="service-hero-cta">
+        <a href="tel:{{PHONE_NUMBER}}" class="service-hero-cta-primary">
+          <svg class="service-hero-cta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
             <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
           </svg>
           {{PROMPT: Write a high-converting call-to-action (3 words or less). Use unique wording that differs from other pages.}}
         </a>
       </div>
-      
-      <!-- Stats -->
-      <div class="hero-stats">
-        <div class="hero-stat-card">
-          <div class="hero-stat-value">{{PROMPT: Write average response time.}}</div>
-          <div class="hero-stat-label">{{PROMPT: Write stat label.}}</div>
-        </div>
-        <div class="hero-stat-card">
-          <div class="hero-stat-value">{{PROMPT: Write customer count.}}</div>
-          <div class="hero-stat-label">{{PROMPT: Write stat label.}}</div>
-        </div>
-        <div class="hero-stat-card">
-          <div class="hero-stat-value">{{PROMPT: Write availability.}}</div>
-          <div class="hero-stat-label">{{PROMPT: Write stat label.}}</div>
-        </div>
-      </div>
     </div>
-
-    <!-- Scroll Indicator -->
-    <button class="scroll-indicator" onclick="document.getElementById('services').scrollIntoView({behavior: 'smooth'})">
-      <svg class="scroll-indicator-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-        <polyline points="6 9 12 15 18 9" />
-      </svg>
-    </button>
   </section>
 
-  <!-- Services Section -->
-  <section id="services" class="services-section">
+  <!-- Problem/Solution & Benefits Section -->
+  <section class="service-problem-solution">
     <div class="section-container">
       <div class="section-header">
-        <div class="section-badge">{{PROMPT: Write a section badge label for services section.}}</div>
-        <h2 class="section-title">{{PROMPT: Write an H2 about services offered.}}</h2>
+        <div class="section-badge">{{PROMPT: Write a section badge label for problem/solution section.}}</div>
+        <h2 class="section-title">{{PROMPT: Write H2 identifying local customer pain points and how your service solves them.}}</h2>
         <p class="section-description">
-          {{PROMPT: Write 1-2 sentences describing the range of services offered.}}
+          {{PROMPT: Write paragraph outlining common problems customers face and how your service provides the solution, emphasizing benefits over features.}}
         </p>
       </div>
-      
-      <div class="services-grid">
-        <div class="service-card">
-          <div class="service-icon service-icon-blue">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-              <path d="M1 3h15v13H1zM16 8h4l3 3v5h-7V8z" />
-            </svg>
-          </div>
-          <h3 class="service-title">{{PROMPT: Write the first included service name from the services list. This should match one of the actual services offered (e.g., "Jump Start", "Fuel Delivery", "Lockout", "Tire Change").}}</h3>
-          <p class="service-description">{{PROMPT: Write a compelling 2-3 sentence description for the first service that emphasizes fast response time in {{CITY}}, 24/7 availability, professional technicians, and how this service solves common customer problems. Include the city name and make it conversion-focused. Use different phrasing than service descriptions on other pages.}}</p>
-        </div>
-
-        <div class="service-card">
-          <div class="service-icon service-icon-green">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-              <rect x="2" y="7" width="20" height="14" rx="2" />
-              <path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16" />
-            </svg>
-          </div>
-          <h3 class="service-title">{{PROMPT: Write the second included service name from the services list. This should match one of the actual services offered (e.g., "Jump Start", "Fuel Delivery", "Lockout", "Tire Change").}}</h3>
-          <p class="service-description">{{PROMPT: Write a compelling 2-3 sentence description for the second service that emphasizes quick arrival time in {{CITY}}, affordable pricing, reliable equipment, and customer satisfaction. Include the city name and make it conversion-focused. Use different phrasing than service descriptions on other pages.}}</p>
-        </div>
-
-        <div class="service-card">
-          <div class="service-icon service-icon-orange">
+      <div class="service-why-grid">
+        <div class="service-why-card">
+          <div class="service-why-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
               <circle cx="12" cy="12" r="10" />
-              <path d="M12 6v6l4 2" />
+              <polyline points="12 6 12 12 16 14" />
             </svg>
           </div>
-          <h3 class="service-title">{{PROMPT: Write the third included service name from the services list. This should match one of the actual services offered (e.g., "Jump Start", "Fuel Delivery", "Lockout", "Tire Change"). If only two services are included, write a relevant third service name.}}</h3>
-          <p class="service-description">{{PROMPT: Write a compelling 2-3 sentence description for the third service that emphasizes same-day service in {{CITY}}, experienced local technicians, and peace of mind. Include the city name and make it conversion-focused. Use different phrasing than service descriptions on other pages.}}</p>
+          <h3 class="service-why-title">{{PROMPT: Write benefit 1 title emphasizing how you solve customer problems. Use different wording than similar benefit titles on other pages.}}</h3>
+          <p class="service-why-description">{{PROMPT: Write benefit 1 description focusing on customer pain points and your solution. Use different wording than similar benefit descriptions on other pages.}}</p>
         </div>
-
-        <div class="service-card">
-          <div class="service-icon service-icon-purple">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
-              <circle cx="12" cy="10" r="3" />
-            </svg>
-          </div>
-          <h3 class="service-title">{{PROMPT: Write the fourth included service name from the services list, or a relevant fourth service if only three are included. This should match one of the actual services offered or be a complementary service.}}</h3>
-          <p class="service-description">{{PROMPT: Write a compelling 2-3 sentence description for the fourth service that emphasizes local expertise in {{CITY}}, damage-free service, and trusted reputation. Include the city name and make it conversion-focused. Use different phrasing than service descriptions on other pages.}}</p>
-        </div>
-
-        <div class="service-card">
-          <div class="service-icon service-icon-red">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-              <path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6" />
-            </svg>
-          </div>
-          <h3 class="service-title">{{PROMPT: Write the fifth included service name from the services list, or a relevant fifth service. This should match one of the actual services offered or be a complementary service.}}</h3>
-          <p class="service-description">{{PROMPT: Write a compelling 2-3 sentence description for the fifth service that emphasizes transparent pricing in {{CITY}}, no hidden fees, and convenient scheduling. Include the city name and make it conversion-focused. Use different phrasing than service descriptions on other pages.}}</p>
-        </div>
-
-        <div class="service-card">
-          <div class="service-icon service-icon-yellow">
+        <div class="service-why-card">
+          <div class="service-why-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
               <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
             </svg>
           </div>
-          <h3 class="service-title">{{PROMPT: Write the sixth included service name from the services list, or a relevant sixth service. This should match one of the actual services offered or be a complementary service.}}</h3>
-          <p class="service-description">{{PROMPT: Write a compelling 2-3 sentence description for the sixth service that emphasizes licensed and insured service in {{CITY}}, customer-first approach, and proven track record. Include the city name and make it conversion-focused. Use different phrasing than service descriptions on other pages.}}</p>
+          <h3 class="service-why-title">{{PROMPT: Write benefit 2 title emphasizing how you solve customer problems. Use different wording than similar benefit titles on other pages.}}</h3>
+          <p class="service-why-description">{{PROMPT: Write benefit 2 description focusing on customer pain points and your solution. Use different wording than similar benefit descriptions on other pages.}}</p>
         </div>
-      </div>
-
-      <div class="services-cta">
-        <div class="services-cta-card">
-          <h3 class="services-cta-title">{{PROMPT: Write CTA headline for services section. Use different wording than CTAs on other pages.}}</h3>
-          <p class="services-cta-description">{{PROMPT: Write CTA description emphasizing 24/7 availability. Use different phrasing than similar CTAs on other pages.}}</p>
-          <a href="tel:{{PHONE_NUMBER}}" class="services-cta-button">
-            {{PHONE_NUMBER}}
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Features Section -->
-  <section id="about" class="features-section">
-    <div class="section-container">
-      <div class="features-content">
-        <div class="features-image-wrapper">
-          <div class="features-image-container">
-            <img src="{{HERO_PHOTO_URL}}" alt="{{PROMPT: Write alt text for features/about image.}}" class="features-image" onerror="this.style.display='none';">
-            <div class="features-image-overlay"></div>
-            <div class="features-image-badge">
-              <div class="features-badge-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                </svg>
-              </div>
-              <div class="features-badge-content">
-                <div class="features-badge-rating">{{PROMPT: Write rating.}}</div>
-                <div class="features-badge-text">{{PROMPT: Write rating source.}}</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="features-text">
-          <div class="section-badge">{{PROMPT: Write a section badge label for about/why choose us section.}}</div>
-          <h2 class="section-title">{{PROMPT: Write an H2 about why choose you/your trusted partner.}}</h2>
-          <p class="features-description">
-            {{PROMPT: Write 2-3 sentences about company commitment, experience, equipment, and professionalism.}}
-          </p>
-          
-          <div class="features-list">
-            <div class="feature-item">
-              <div class="feature-item-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                  <circle cx="12" cy="12" r="10" />
-                  <polyline points="12 6 12 12 16 14" />
-                </svg>
-              </div>
-              <span>{{PROMPT: Write benefit 1 emphasizing fast response time. Use different wording than similar benefits on other pages.}}</span>
-            </div>
-            <div class="feature-item">
-              <div class="feature-item-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-                </svg>
-              </div>
-              <span>{{PROMPT: Write benefit 2 emphasizing licensing and insurance. Use different wording than similar benefits on other pages.}}</span>
-            </div>
-            <div class="feature-item">
-              <div class="feature-item-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                </svg>
-              </div>
-              <span>{{PROMPT: Write benefit 3 emphasizing customer satisfaction. Use different wording than similar benefits on other pages.}}</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="features-grid">
-        <div class="text-center mb-12">
-          <h2 class="section-title">{{PROMPT: Write an H2 about what sets you apart.}}</h2>
-          <p class="section-description">
-            {{PROMPT: Write subtitle about going above and beyond.}}
-          </p>
-        </div>
-
-        <div class="features-grid-items">
-          <div class="feature-grid-card">
-            <div class="feature-grid-icon feature-grid-icon-blue">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                <circle cx="12" cy="12" r="10" />
-                <polyline points="12 6 12 12 16 14" />
-              </svg>
-            </div>
-            <h3 class="feature-grid-title">{{PROMPT: Write feature 1 title.}}</h3>
-            <p class="feature-grid-description">{{PROMPT: Write feature 1 description emphasizing speed and emergency response. Use different wording than similar features on other pages.}}</p>
-          </div>
-
-          <div class="feature-grid-card">
-            <div class="feature-grid-icon feature-grid-icon-green">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-              </svg>
-            </div>
-            <h3 class="feature-grid-title">{{PROMPT: Write feature 2 title.}}</h3>
-            <p class="feature-grid-description">{{PROMPT: Write feature 2 description emphasizing peace of mind and coverage. Use different wording than similar features on other pages.}}</p>
-          </div>
-
-          <div class="feature-grid-card">
-            <div class="feature-grid-icon feature-grid-icon-purple">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" />
-                <circle cx="9" cy="7" r="4" />
-                <path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" />
-              </svg>
-            </div>
-            <h3 class="feature-grid-title">{{PROMPT: Write feature 3 title.}}</h3>
-            <p class="feature-grid-description">{{PROMPT: Write feature 3 description emphasizing experience and certification. Use different wording than similar features on other pages.}}</p>
-          </div>
-
-          <div class="feature-grid-card">
-            <div class="feature-grid-icon feature-grid-icon-yellow">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                <line x1="12" y1="1" x2="12" y2="23" />
-                <path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6" />
-              </svg>
-            </div>
-            <h3 class="feature-grid-title">{{PROMPT: Write feature 4 title.}}</h3>
-            <p class="feature-grid-description">{{PROMPT: Write feature 4 description emphasizing no hidden fees and upfront costs. Use different wording than similar features on other pages.}}</p>
-          </div>
-
-          <div class="feature-grid-card">
-            <div class="feature-grid-icon feature-grid-icon-red">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
-                <circle cx="12" cy="10" r="3" />
-              </svg>
-            </div>
-            <h3 class="feature-grid-title">{{PROMPT: Write feature 5 title.}}</h3>
-            <p class="feature-grid-description">{{PROMPT: Write feature 5 description emphasizing service area coverage. Use different wording than similar features on other pages.}}</p>
-          </div>
-
-          <div class="feature-grid-card">
-            <div class="feature-grid-icon feature-grid-icon-orange">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-              </svg>
-            </div>
-            <h3 class="feature-grid-title">{{PROMPT: Write feature 6 title.}}</h3>
-            <p class="feature-grid-description">{{PROMPT: Write feature 6 description emphasizing ratings and customer priority. Use different wording than similar features on other pages.}}</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Map Section -->
-  <section id="map-section" class="map-section">
-    <div class="section-container">
-      <div class="section-header">
-        <div class="section-badge">{{PROMPT: Write a section badge label for location.}}</div>
-        <h2 class="section-title">{{PROMPT: Write an H2 about location/service area. Use different wording than similar headers on other pages.}}</h2>
-        <p class="section-description">
-          {{PROMPT: Write address or service area description.}}
-        </p>
-      </div>
-      <div class="map-wrapper">
-        <div id="map" style="width: 100%; height: 500px; border-radius: var(--radius-2xl); overflow: hidden;"></div>
-        <div class="map-cta">
-          <a href="tel:{{PHONE_NUMBER}}" class="map-cta-button">
-            <svg class="map-cta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 1.25rem; height: 1.25rem;">
-              <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+        <div class="service-why-card">
+          <div class="service-why-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
             </svg>
-            {{PROMPT: Write a high-converting call-to-action (3 words or less). Use unique wording that differs from other pages.}}
-          </a>
+          </div>
+          <h3 class="service-why-title">{{PROMPT: Write benefit 3 title emphasizing how you solve customer problems. Use different wording than similar benefit titles on other pages.}}</h3>
+          <p class="service-why-description">{{PROMPT: Write benefit 3 description focusing on customer pain points and your solution. Use different wording than similar benefit descriptions on other pages.}}</p>
+        </div>
+        <div class="service-why-card">
+          <div class="service-why-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <line x1="12" y1="1" x2="12" y2="23" />
+              <path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6" />
+            </svg>
+          </div>
+          <h3 class="service-why-title">{{PROMPT: Write benefit 4 title emphasizing how you solve customer problems. Use different wording than similar benefit titles on other pages.}}</h3>
+          <p class="service-why-description">{{PROMPT: Write benefit 4 description focusing on customer pain points and your solution. Use different wording than similar benefit descriptions on other pages.}}</p>
         </div>
       </div>
     </div>
@@ -497,9 +273,9 @@
     <div class="section-container">
       <div class="section-header">
         <div class="section-badge">{{PROMPT: Write a section badge label for testimonials section.}}</div>
-        <h2 class="section-title">{{PROMPT: Write an H2 about testimonials/reviews.}}</h2>
+        <h2 class="section-title">{{PROMPT: Write an H2 about testimonials/reviews for this service.}}</h2>
         <p class="section-description">
-          {{PROMPT: Write subtitle about hearing from satisfied customers.}}
+          {{PROMPT: Write subtitle about hearing from satisfied customers who used this service.}}
         </p>
       </div>
       
@@ -529,7 +305,7 @@
             </svg>
           </div>
           <blockquote class="testimonial-text">
-            "{{PROMPT: Write a sample testimonial about professional service, fast response, and getting back on the road quickly.}}"
+            "{{PROMPT: Write a sample testimonial about this specific service, emphasizing professional service, fast response, and satisfaction.}}"
           </blockquote>
           <div class="testimonial-author">
             <div class="testimonial-avatar">
@@ -567,7 +343,7 @@
             </svg>
           </div>
           <blockquote class="testimonial-text">
-            "{{PROMPT: Write a sample testimonial about friendly staff, quick arrival, and fair pricing.}}"
+            "{{PROMPT: Write a sample testimonial about this service, emphasizing friendly staff, quick arrival, and quality work.}}"
           </blockquote>
           <div class="testimonial-author">
             <div class="testimonial-avatar">
@@ -605,7 +381,7 @@
             </svg>
           </div>
           <blockquote class="testimonial-text">
-            "{{PROMPT: Write a sample testimonial about fair pricing, excellent service, and vehicle care.}}"
+            "{{PROMPT: Write a sample testimonial about this service, emphasizing fair pricing, excellent results, and reliability.}}"
           </blockquote>
           <div class="testimonial-author">
             <div class="testimonial-avatar">
@@ -631,12 +407,219 @@
             <div class="testimonial-footer-avatar-initials">{{PROMPT: Write customer initials 3.}}</div>
           </div>
         </div>
-        <span class="testimonials-footer-text">{{PROMPT: Write text about joining satisfied customers.}}</span>
+        <span class="testimonials-footer-text">{{PROMPT: Write text about joining satisfied customers who used this service.}}</span>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
+  <!-- Detailed Services/Process Section -->
+  <section class="service-details">
+    <div class="section-container">
+      <div class="service-details-content">
+        <div class="service-details-text">
+          <h2 class="section-title">{{PROMPT: Write H2 about what this service includes and how the process works.}}</h2>
+          <p class="service-details-description">
+            {{PROMPT: Write 2-3 paragraphs describing the service in detail, what's included, how it works step-by-step, and why customers should choose you for this service. Use different wording than similar descriptions on other pages.}}
+          </p>
+          
+          <div class="service-features-list">
+            <h3 class="service-features-title">{{PROMPT: Write H3 about what's included in this service.}}</h3>
+            <ul class="service-features-items">
+              <li class="service-feature-item">
+                <svg class="service-feature-check" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+                {{PROMPT: Write service feature 1.}}
+              </li>
+              <li class="service-feature-item">
+                <svg class="service-feature-check" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+                {{PROMPT: Write service feature 2.}}
+              </li>
+              <li class="service-feature-item">
+                <svg class="service-feature-check" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+                {{PROMPT: Write service feature 3.}}
+              </li>
+              <li class="service-feature-item">
+                <svg class="service-feature-check" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+                {{PROMPT: Write service feature 4.}}
+              </li>
+              <li class="service-feature-item">
+                <svg class="service-feature-check" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+                {{PROMPT: Write service feature 5.}}
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="service-details-image">
+          <img src="{{HERO_PHOTO_URL}}" alt="{{PROMPT: Write alt text for service image.}}" class="service-image" onerror="this.style.display='none';">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Secondary CTA Section -->
+  <section class="service-cta">
+    <div class="section-container">
+      <div class="service-cta-card">
+        <h2 class="service-cta-title">{{PROMPT: Write CTA headline for service page. Use different wording than CTAs on other pages.}}</h2>
+        <p class="service-cta-description">
+          {{PROMPT: Write CTA description emphasizing immediate availability and professional service. Use different phrasing than similar CTAs on other pages.}}
+        </p>
+        <a href="tel:{{PHONE_NUMBER}}" class="service-cta-button">
+          <svg class="service-cta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+          </svg>
+          {{PHONE_NUMBER}}
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Signals/Certifications Section -->
+  <section class="service-trust-signals">
+    <div class="section-container">
+      <div class="section-header">
+        <div class="section-badge">{{PROMPT: Write a section badge label for trust signals.}}</div>
+        <h2 class="section-title">{{PROMPT: Write H2 about credentials, licenses, and certifications.}}</h2>
+        <p class="section-description">
+          {{PROMPT: Write subtitle about being licensed, insured, and certified.}}
+        </p>
+      </div>
+      <div class="service-why-grid">
+        <div class="service-why-card">
+          <div class="service-why-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+            </svg>
+          </div>
+          <h3 class="service-why-title">{{PROMPT: Write trust signal 1 title (e.g., "Licensed & Insured", "BBB Accredited", "Certified Technicians").}}</h3>
+          <p class="service-why-description">{{PROMPT: Write trust signal 1 description explaining the credential and its importance.}}</p>
+        </div>
+        <div class="service-why-card">
+          <div class="service-why-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path d="M9 12l2 2 4-4" />
+              <path d="M21 12c-1 0-3-1-3-3s2-3 3-3 3 1 3 3-2 3-3 3z" />
+              <path d="M3 12c1 0 3-1 3-3s-2-3-3-3-3 1-3 3 2 3 3 3z" />
+            </svg>
+          </div>
+          <h3 class="service-why-title">{{PROMPT: Write trust signal 2 title (e.g., "Years of Experience", "Local Awards", "Industry Recognition").}}</h3>
+          <p class="service-why-description">{{PROMPT: Write trust signal 2 description explaining the credential and its importance.}}</p>
+        </div>
+        <div class="service-why-card">
+          <div class="service-why-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+            </svg>
+          </div>
+          <h3 class="service-why-title">{{PROMPT: Write trust signal 3 title (e.g., "Satisfaction Guarantee", "24/7 Availability", "Emergency Response").}}</h3>
+          <p class="service-why-description">{{PROMPT: Write trust signal 3 description explaining the credential and its importance.}}</p>
+        </div>
+        <div class="service-why-card">
+          <div class="service-why-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path d="M9 11l3 3L22 4" />
+              <path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11" />
+            </svg>
+          </div>
+          <h3 class="service-why-title">{{PROMPT: Write trust signal 4 title (e.g., "Background Checked", "Bonded", "Local Business").}}</h3>
+          <p class="service-why-description">{{PROMPT: Write trust signal 4 description explaining the credential and its importance.}}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQs Section -->
+  <section class="service-faqs">
+    <div class="section-container">
+      <div class="section-header">
+        <div class="section-badge">{{PROMPT: Write a section badge label for FAQs.}}</div>
+        <h2 class="section-title">{{PROMPT: Write H2 about frequently asked questions.}}</h2>
+        <p class="section-description">
+          {{PROMPT: Write subtitle about addressing common questions and concerns.}}
+        </p>
+      </div>
+      <div class="faqs-list">
+        <div class="faq-item">
+          <h3 class="faq-question">{{PROMPT: Write FAQ question 1 about this service.}}</h3>
+          <p class="faq-answer">{{PROMPT: Write FAQ answer 1 addressing the question and potential objections.}}</p>
+        </div>
+        <div class="faq-item">
+          <h3 class="faq-question">{{PROMPT: Write FAQ question 2 about this service.}}</h3>
+          <p class="faq-answer">{{PROMPT: Write FAQ answer 2 addressing the question and potential objections.}}</p>
+        </div>
+        <div class="faq-item">
+          <h3 class="faq-question">{{PROMPT: Write FAQ question 3 about this service.}}</h3>
+          <p class="faq-answer">{{PROMPT: Write FAQ answer 3 addressing the question and potential objections.}}</p>
+        </div>
+        <div class="faq-item">
+          <h3 class="faq-question">{{PROMPT: Write FAQ question 4 about this service.}}</h3>
+          <p class="faq-answer">{{PROMPT: Write FAQ answer 4 addressing the question and potential objections.}}</p>
+        </div>
+        <div class="faq-item">
+          <h3 class="faq-question">{{PROMPT: Write FAQ question 5 about this service.}}</h3>
+          <p class="faq-answer">{{PROMPT: Write FAQ answer 5 addressing the question and potential objections.}}</p>
+        </div>
+        <div class="faq-item">
+          <h3 class="faq-question">{{PROMPT: Write FAQ question 6 about this service.}}</h3>
+          <p class="faq-answer">{{PROMPT: Write FAQ answer 6 addressing the question and potential objections.}}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Location & Contact (NAP + Map) Section -->
+  <section id="map-section" class="map-section">
+    <div class="section-container">
+      <div class="section-header">
+        <div class="section-badge">{{PROMPT: Write a section badge label for location.}}</div>
+        <h2 class="section-title">{{PROMPT: Write an H2 about location/service area. Use different wording than similar headers on other pages.}}</h2>
+        <p class="section-description">
+          {{PROMPT: Write address or service area description.}}
+        </p>
+      </div>
+      <div class="map-wrapper">
+        <div id="map" style="width: 100%; height: 500px; border-radius: var(--radius-2xl); overflow: hidden;"></div>
+        <div class="map-cta">
+          <a href="tel:{{PHONE_NUMBER}}" class="map-cta-button">
+            <svg class="map-cta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 1.25rem; height: 1.25rem;">
+              <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+            </svg>
+            {{PROMPT: Write a high-converting call-to-action (3 words or less). Use unique wording that differs from other pages.}}
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA Section -->
+  <section class="service-cta service-cta-final">
+    <div class="section-container">
+      <div class="service-cta-card">
+        <h2 class="service-cta-title">{{PROMPT: Write final CTA headline for service page. Use different wording than other CTAs on this page.}}</h2>
+        <p class="service-cta-description">
+          {{PROMPT: Write final CTA description emphasizing urgency and immediate action. Use different phrasing than other CTAs on this page.}}
+        </p>
+        <a href="tel:{{PHONE_NUMBER}}" class="service-cta-button">
+          <svg class="service-cta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+          </svg>
+          {{PROMPT: Write a high-converting call-to-action (3 words or less). Use unique wording that differs from other CTAs on this page.}}
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer (same as index) -->
   <footer class="footer">
     <div class="footer-container">
       <div class="footer-grid">
@@ -647,7 +630,7 @@
                 <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
               </svg>
             </div>
-              <div class="footer-brand-text">
+            <div class="footer-brand-text">
               <div class="footer-brand-name">{{BUSINESS_NAME}}</div>
               <div class="footer-brand-tagline">{{PROMPT: Write a short, memorable tagline for {{BUSINESS_NAME}} (3-5 words) that emphasizes speed, reliability, or local service (e.g., "Fast. Reliable. Local.", "Your Trusted Roadside Partner", "24/7 Emergency Service").}}</div>
             </div>
@@ -660,9 +643,9 @@
         <div class="footer-links">
           <h4 class="footer-links-title">{{PROMPT: Write footer section title for navigation links (e.g., "Quick Links", "Navigation", "Site Map", "Pages").}}</h4>
           <ul class="footer-links-list">
-            <li><a href="index.html" class="footer-link">Home</a></li>
-            <li><a href="services/service-template.html" class="footer-link">Services</a></li>
-            <li><a href="contact.html" class="footer-link">Contact</a></li>
+            <li><a href="../index.html" class="footer-link">Home</a></li>
+            <li><a href="service-template.html" class="footer-link">Services</a></li>
+            <li><a href="../contact.html" class="footer-link">Contact</a></li>
           </ul>
         </div>
 
@@ -769,7 +752,7 @@
           });
       }
   </script>
-  <script src="script.js"></script>
-    </body>
-  </html>
-  
+  <script src="../script.js"></script>
+</body>
+</html>
+
