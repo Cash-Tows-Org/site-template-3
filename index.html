@@ -1,0 +1,813 @@
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dave Towing - Fast Towing in Maple Grove</title>
+  <meta name="description" content="{{PROMPT: Write a meta description for homepage under 160 characters emphasizing fast response, 24/7 availability, and local service for Dave Towing in Maple Grove.}}">
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+      tailwind.config = {
+          theme: {
+              extend: {
+                  colors: {
+                      primary: "#0f172a",
+                      accent: "#acff00",
+                      secondary: "#acff00",
+                  }
+              }
+          }
+      }
+      // Set CSS variables from tokens (will be replaced by bot)
+      if (typeof document !== 'undefined') {
+          const primaryColor = '#0f172a';
+          const accentColor = '#acff00';
+          // Only set if tokens were replaced (not containing the token name)
+          if (!primaryColor.includes('PRIMARY_COLOR')) {
+              document.documentElement.style.setProperty('--primary-color', primaryColor);
+          }
+          if (!accentColor.includes('ACCENT_COLOR')) {
+              document.documentElement.style.setProperty('--accent-color', accentColor);
+          }
+      }
+  </script>
+  <style>
+      /* Colors will be set by tokens - defaults only if tokens not replaced */
+      :root {
+          --primary-color: #0f172a;
+          --accent-color: #acff00;
+      }
+      
+      /* Override CSS variables with actual color values after token replacement */
+      body {
+          --primary-color: #0f172a;
+          --accent-color: #acff00;
+      }
+      
+      /* Ensure SVG icons don't take full screen */
+      .map-cta-icon {
+          width: 1.25rem;
+          height: 1.25rem;
+          display: inline-block;
+          flex-shrink: 0;
+      }
+      
+      /* Map section styling */
+      .map-section {
+          background-color: #F9FAFB;
+          padding: 4rem 0;
+      }
+      
+      .map-wrapper {
+          background: white;
+          border-radius: 1rem;
+          padding: 2rem;
+          box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+      }
+      
+      #map {
+          background-color: #E5E7EB;
+          min-height: 500px;
+      }
+      
+      .map-cta {
+          margin-top: 1.5rem;
+          text-align: center;
+      }
+      
+      .map-cta-button {
+          display: inline-flex;
+          align-items: center;
+          gap: 0.5rem;
+          background-color: var(--primary-color);
+          color: white;
+          padding: 0.75rem 1.5rem;
+          border-radius: 0.5rem;
+          font-weight: 600;
+          text-decoration: none;
+          transition: all 0.3s;
+      }
+      
+      .map-cta-button:hover {
+          background-color: var(--accent-color);
+          transform: translateY(-2px);
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      }
+      
+      /* Footer primary color background */
+      .footer {
+          background-color: var(--primary-color);
+          color: white;
+      }
+      
+      /* Navbar accent color */
+      header.bg-accent {
+          background-color: var(--accent-color) !important;
+      }
+  </style>
+  <link rel="stylesheet" href="assets/css/shared.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
+    </head>
+<body>
+    <!-- ===== START: HEADER ===== -->
+    <header class="bg-accent shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-5 flex justify-between items-center">
+            <div class="text-xl md:text-2xl font-bold text-white">
+                Dave Towing
+            </div>
+            <nav class="hidden md:block">
+                <ul class="flex space-x-10">
+                    <li>
+                        <a href="index.html" class="text-white/90 hover:text-white transition-colors font-medium text-lg relative group">
+                            Home
+                            <span class="absolute bottom-0 left-0 w-full h-0.5 bg-white transition-all duration-300"></span>
+                        </a>
+                    </li>
+                    <li class="relative services-dropdown">
+                        <button class="text-white/90 hover:text-white transition-colors font-medium text-lg relative group flex items-center services-toggle">
+                            Services
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                            </svg>
+                            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-white group-hover:w-full transition-all duration-300"></span>
+                        </button>
+                        <div class="services-menu absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-xl border border-gray-100 py-2 hidden" id="services-dropdown">
+                            <a href="services/light-duty-towing.html" class="block px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-[#4057BF] transition-colors font-medium">
+                                Light Duty Towing
+                            </a>
+<a href="services/tire-change.html" class="block px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-[#4057BF] transition-colors font-medium">
+                                Tire Change
+                            </a>
+<a href="services/lockout.html" class="block px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-[#4057BF] transition-colors font-medium">
+                                Lockout
+                            </a>
+<a href="services/fuel-delivery.html" class="block px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-[#4057BF] transition-colors font-medium">
+                                Fuel Delivery
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="contact.html" class="text-white/90 hover:text-white transition-colors font-medium text-lg relative group">
+                            Contact
+                            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-white group-hover:w-full transition-all duration-300"></span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="hidden md:block">
+                <a href="tel:(161) 271-5678" class="bg-primary text-white px-4 md:px-6 py-2 md:py-3 rounded-lg font-semibold hover:bg-white hover:text-accent transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-105 text-sm md:text-base">
+                    Request Immediate Assistance
+                </a>
+            </div>
+            <button class="md:hidden text-white hover:text-white/80 transition-colors mobile-menu-toggle">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+        <div class="mobile-menu md:hidden bg-accent py-6 px-4 shadow-lg border-t border-accent/20 hidden">
+            <ul class="space-y-5">
+                <li>
+                    <a href="index.html" class="block text-white hover:text-white/80 font-medium text-lg transition-colors">
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="services/light-duty-towing.html" class="block text-gray-700 hover:text-[#4057BF] font-medium text-lg transition-colors">
+                        Light Duty Towing
+                    </a>
+                </li>
+<li>
+                    <a href="services/tire-change.html" class="block text-gray-700 hover:text-[#4057BF] font-medium text-lg transition-colors">
+                        Tire Change
+                    </a>
+                </li>
+<li>
+                    <a href="services/lockout.html" class="block text-gray-700 hover:text-[#4057BF] font-medium text-lg transition-colors">
+                        Lockout
+                    </a>
+                </li>
+<li>
+                    <a href="services/fuel-delivery.html" class="block text-gray-700 hover:text-[#4057BF] font-medium text-lg transition-colors">
+                        Fuel Delivery
+                    </a>
+                </li>
+                <li>
+                    <a href="contact.html" class="block text-white hover:text-white/80 font-medium text-lg transition-colors">
+                        Contact
+                    </a>
+                </li>
+                <li>
+                    <a href="tel:(161) 271-5678" class="block bg-primary text-white px-6 py-3 rounded-lg text-center font-semibold hover:bg-white hover:text-accent transition-all duration-300 shadow-md">
+                        Get Help Now
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <!-- ===== END: HEADER ===== -->
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <!-- Background Image -->
+    <div class="hero-background">
+      <!-- Desktop Image -->
+      <img src="img/hero-desktop.jpg" alt="{{PROMPT: Write alt text for hero image featuring towing/roadside assistance.}}" class="hero-image hidden md:block" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+      <!-- Mobile Image -->
+      <img src="img/hero-mobile.jpg" alt="{{PROMPT: Write alt text for hero image featuring towing/roadside assistance.}}" class="hero-image md:hidden" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+      <div class="hero-image-fallback" style="display:none;">
+        <div class="hero-fallback-content">
+          <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODgiIGhlaWdodD0iODgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgc3Ryb2tlPSIjMDAwIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBvcGFjaXR5PSIuMyIgZmlsbD0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIzLjciPjxyZWN0IHg9IjE2IiB5PSIxNiIgd2lkdGg9IjU2IiBoZWlnaHQ9IjU2IiByeD0iNiIvPjxwYXRoIGQ9Im0xNiA1OCAxNi0xOCAzMiAzMiIvPjxjaXJjbGUgY3g9IjUzIiBjeT0iMzUiIHI9IjciLz48L3N2Zz4KCg==" alt="Image placeholder">
+        </div>
+      </div>
+      <div class="hero-overlay"></div>
+    </div>
+
+    <!-- Hero Content -->
+    <div class="hero-content">
+      <div class="hero-badge">
+        <svg class="hero-badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+          <circle cx="12" cy="12" r="10" />
+          <polyline points="12 6 12 12 16 14" />
+        </svg>
+        <span>24/7 Emergency Service • Quick Response</span>
+      </div>
+
+      <h1 class="hero-headline">
+        Dave Towing - Your Reliable Towing Service in Maple Grove
+      </h1>
+
+      <p class="hero-description">
+        When you need a tow or roadside assistance in Maple Grove, count on us for fast and dependable service, day or night.
+      </p>
+
+      <div class="hero-cta-group">
+        <a href="tel:(161) 271-5678" class="hero-cta-primary">
+          <svg class="hero-cta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+          </svg>
+          Call for Help
+        </a>
+      </div>
+      
+      <!-- Stats -->
+      <div class="hero-stats">
+        <div class="hero-stat-card">
+          <div class="hero-stat-value">Under 30 minutes</div>
+          <div class="hero-stat-label">Years in Business</div>
+        </div>
+        <div class="hero-stat-card">
+          <div class="hero-stat-value">Over 1,000 satisfied customers</div>
+          <div class="hero-stat-label">5-Star Customer Rating</div>
+        </div>
+        <div class="hero-stat-card">
+          <div class="hero-stat-value">24/7 emergency availability</div>
+          <div class="hero-stat-label">Local Service Area</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll Indicator -->
+    <button class="scroll-indicator" onclick="document.getElementById('services').scrollIntoView({behavior: 'smooth'})">
+      <svg class="scroll-indicator-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+        <polyline points="6 9 12 15 18 9" />
+      </svg>
+    </button>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="services-section">
+    <div class="section-container">
+      <div class="section-header">
+        <div class="section-badge">Our Services</div>
+        <h2 class="section-title">Comprehensive Roadside Assistance Services</h2>
+        <p class="section-description">
+          At Dave Towing, we offer a full range of roadside assistance services in Maple Grove, including light duty towing, tire changes, lockout assistance, and fuel delivery.
+        </p>
+      </div>
+      
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon service-icon-blue">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path d="M1 3h15v13H1zM16 8h4l3 3v5h-7V8z" />
+            </svg>
+          </div>
+          <h3 class="service-title">Light Duty Towing</h3>
+          <p class="service-description">Need light duty towing in Maple Grove? Our expert team is ready to respond quickly, ensuring you’re back on the road in no time. With 24/7 availability, you can trust us for all your towing needs.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon service-icon-green">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <rect x="2" y="7" width="20" height="14" rx="2" />
+              <path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16" />
+            </svg>
+          </div>
+          <h3 class="service-title">Tire Change</h3>
+          <p class="service-description">Stuck with a flat tire in Maple Grove? Our tire change service is quick and affordable, getting you back on your way without the hassle. Let our professionals take care of it!</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon service-icon-orange">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <circle cx="12" cy="12" r="10" />
+              <path d="M12 6v6l4 2" />
+            </svg>
+          </div>
+          <h3 class="service-title">Lockout</h3>
+          <p class="service-description">Locked out of your vehicle in Maple Grove? Our lockout service is just a call away, providing fast and reliable assistance to get you back inside safely.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon service-icon-purple">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg>
+          </div>
+          <h3 class="service-title">Fuel Delivery</h3>
+          <p class="service-description">Running low on fuel? Our fuel delivery service in Maple Grove brings the gas to you, so you can continue your journey without delay.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon service-icon-red">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6" />
+            </svg>
+          </div>
+          <h3 class="service-title">{{PROMPT: Write the fifth included service name from the services list, or a relevant fifth service. This should match one of the actual services offered or be a complementary service.}}</h3>
+          <p class="service-description">{{PROMPT: Write a compelling 2-3 sentence description for the fifth service that emphasizes transparent pricing in Maple Grove, no hidden fees, and convenient scheduling. Include the city name and make it conversion-focused. Use different phrasing than service descriptions on other pages.}}</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon service-icon-yellow">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+            </svg>
+          </div>
+          <h3 class="service-title">{{PROMPT: Write the sixth included service name from the services list, or a relevant sixth service. This should match one of the actual services offered or be a complementary service.}}</h3>
+          <p class="service-description">{{PROMPT: Write a compelling 2-3 sentence description for the sixth service that emphasizes licensed and insured service in Maple Grove, customer-first approach, and proven track record. Include the city name and make it conversion-focused. Use different phrasing than service descriptions on other pages.}}</p>
+        </div>
+      </div>
+
+      <div class="services-cta">
+        <div class="services-cta-card">
+          <h3 class="services-cta-title">Need Help? We're Here for You!</h3>
+          <p class="services-cta-description">Our team is available around the clock to provide you with the roadside assistance you need, whenever you need it.</p>
+          <a href="tel:(161) 271-5678" class="services-cta-button">
+            (161) 271-5678
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="about" class="features-section">
+    <div class="section-container">
+      <div class="features-content">
+        <div class="features-image-wrapper">
+          <div class="features-image-container">
+            <img src="img/hero-desktop.jpg" alt="{{PROMPT: Write alt text for features/about image.}}" class="features-image" onerror="this.style.display='none';">
+            <div class="features-image-overlay"></div>
+            <div class="features-image-badge">
+              <div class="features-badge-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                </svg>
+              </div>
+              <div class="features-badge-content">
+                <div class="features-badge-rating">5.0</div>
+                <div class="features-badge-text">Google Reviews</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="features-text">
+          <div class="section-badge">Customer Testimonials</div>
+          <h2 class="section-title">Why Choose Dave Towing?</h2>
+          <p class="features-description">
+            With years of experience in the towing industry, Dave Towing is committed to providing reliable, safe, and efficient roadside assistance in Maple Grove. Our licensed technicians use state-of-the-art equipment to ensure your vehicle is handled with care.
+          </p>
+          
+          <div class="features-list">
+            <div class="feature-item">
+              <div class="feature-item-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                  <circle cx="12" cy="12" r="10" />
+                  <polyline points="12 6 12 12 16 14" />
+                </svg>
+              </div>
+              <span>Rapid Response Times</span>
+            </div>
+            <div class="feature-item">
+              <div class="feature-item-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                </svg>
+              </div>
+              <span>Licensed and Insured Professionals</span>
+            </div>
+            <div class="feature-item">
+              <div class="feature-item-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                </svg>
+              </div>
+              <span>Committed to Customer Satisfaction</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="features-grid">
+        <div class="text-center mb-12">
+          <h2 class="section-title">What Sets Us Apart</h2>
+          <p class="section-description">
+            We go above and beyond for our customers.
+          </p>
+        </div>
+
+        <div class="features-grid-items">
+          <div class="feature-grid-card">
+            <div class="feature-grid-icon feature-grid-icon-blue">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <circle cx="12" cy="12" r="10" />
+                <polyline points="12 6 12 12 16 14" />
+              </svg>
+            </div>
+            <h3 class="feature-grid-title">Immediate Assistance</h3>
+            <p class="feature-grid-description">Our team is always ready to respond to your call, ensuring you receive help as quickly as possible.</p>
+          </div>
+
+          <div class="feature-grid-card">
+            <div class="feature-grid-icon feature-grid-icon-green">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              </svg>
+            </div>
+            <h3 class="feature-grid-title">Comprehensive Coverage</h3>
+            <p class="feature-grid-description">We serve Maple Grove and surrounding areas, providing reliable roadside assistance wherever you are.</p>
+          </div>
+
+          <div class="feature-grid-card">
+            <div class="feature-grid-icon feature-grid-icon-purple">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" />
+                <circle cx="9" cy="7" r="4" />
+                <path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" />
+              </svg>
+            </div>
+            <h3 class="feature-grid-title">Expert Technicians</h3>
+            <p class="feature-grid-description">Our technicians are experienced, certified, and dedicated to providing the best service possible.</p>
+          </div>
+
+          <div class="feature-grid-card">
+            <div class="feature-grid-icon feature-grid-icon-yellow">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <line x1="12" y1="1" x2="12" y2="23" />
+                <path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6" />
+              </svg>
+            </div>
+            <h3 class="feature-grid-title">Transparent Pricing</h3>
+            <p class="feature-grid-description">No hidden fees or surprise charges—just honest, upfront pricing for all our services.</p>
+          </div>
+
+          <div class="feature-grid-card">
+            <div class="feature-grid-icon feature-grid-icon-red">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+            </div>
+            <h3 class="feature-grid-title">Customer-Focused Approach</h3>
+            <p class="feature-grid-description">Your satisfaction is our priority. We strive to exceed your expectations with every service call.</p>
+          </div>
+
+          <div class="feature-grid-card">
+            <div class="feature-grid-icon feature-grid-icon-orange">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+              </svg>
+            </div>
+            <h3 class="feature-grid-title">High Customer Ratings</h3>
+            <p class="feature-grid-description">Join our community of satisfied customers who trust us for all their roadside needs.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Map Section -->
+  <section id="map-section" class="map-section">
+    <div class="section-container">
+      <div class="section-header">
+        <div class="section-badge">Service Area</div>
+        <h2 class="section-title">Serving Maple Grove and Beyond</h2>
+        <p class="section-description">
+          Proudly serving Maple Grove and its surrounding neighborhoods with fast and reliable roadside assistance.
+        </p>
+      </div>
+      <div class="map-wrapper">
+        <div id="map" style="width: 100%; height: 500px; border-radius: var(--radius-2xl); overflow: hidden;"></div>
+        <div class="map-cta">
+          <a href="tel:(161) 271-5678" class="map-cta-button">
+            <svg class="map-cta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 1.25rem; height: 1.25rem;">
+              <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+            </svg>
+            Contact Us Now
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="testimonials-section">
+    <div class="section-container">
+      <div class="section-header">
+        <div class="section-badge">Customer Reviews</div>
+        <h2 class="section-title">What Our Customers Say</h2>
+        <p class="section-description">
+          Hear from our satisfied customers who have experienced our services.
+        </p>
+      </div>
+      
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-quote-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z" />
+              <path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z" />
+            </svg>
+          </div>
+          <div class="testimonial-stars">
+            <svg class="testimonial-star" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+            </svg>
+            <svg class="testimonial-star" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+            </svg>
+            <svg class="testimonial-star" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+            </svg>
+            <svg class="testimonial-star" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+            </svg>
+            <svg class="testimonial-star" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+            </svg>
+          </div>
+          <blockquote class="testimonial-text">
+            ""Dave Towing was quick and professional when I had a flat tire. They had me back on the road in no time!" - J.S., Maple Grove"
+          </blockquote>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">
+              <div class="testimonial-avatar-initials">J.S.</div>
+            </div>
+            <div class="testimonial-author-info">
+              <div class="testimonial-author-name">Jennifer Smith</div>
+              <div class="testimonial-author-location">Maple Grove</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-quote-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z" />
+              <path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z" />
+            </svg>
+          </div>
+          <div class="testimonial-stars">
+            <svg class="testimonial-star" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+            </svg>
+            <svg class="testimonial-star" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+            </svg>
+            <svg class="testimonial-star" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+            </svg>
+            <svg class="testimonial-star" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+            </svg>
+            <svg class="testimonial-star" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+            </svg>
+          </div>
+          <blockquote class="testimonial-text">
+            ""The staff was friendly, and they arrived quickly to help me unlock my car. Highly recommend!" - M.T., Maple Grove"
+          </blockquote>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">
+              <div class="testimonial-avatar-initials">M.T.</div>
+            </div>
+            <div class="testimonial-author-info">
+              <div class="testimonial-author-name">Michael Thompson</div>
+              <div class="testimonial-author-location">Maple Grove</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-quote-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z" />
+              <path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z" />
+            </svg>
+          </div>
+          <div class="testimonial-stars">
+            <svg class="testimonial-star" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+            </svg>
+            <svg class="testimonial-star" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+            </svg>
+            <svg class="testimonial-star" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+            </svg>
+            <svg class="testimonial-star" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+            </svg>
+            <svg class="testimonial-star" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+            </svg>
+          </div>
+          <blockquote class="testimonial-text">
+            ""Great service at a fair price! They really took care of my vehicle during the tow." - L.H., Maple Grove"
+          </blockquote>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">
+              <div class="testimonial-avatar-initials">L.H.</div>
+            </div>
+            <div class="testimonial-author-info">
+              <div class="testimonial-author-name">Laura Harris</div>
+              <div class="testimonial-author-location">Maple Grove</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonials-footer">
+        <div class="testimonials-footer-avatars">
+          <div class="testimonial-footer-avatar">
+            <div class="testimonial-footer-avatar-initials">J.S.</div>
+          </div>
+          <div class="testimonial-footer-avatar">
+            <div class="testimonial-footer-avatar-initials">M.T.</div>
+          </div>
+          <div class="testimonial-footer-avatar">
+            <div class="testimonial-footer-avatar-initials">L.H.</div>
+          </div>
+        </div>
+        <span class="testimonials-footer-text">Join our growing list of satisfied customers who trust Dave Towing for their roadside assistance needs.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-brand-logo">
+            <div class="footer-logo-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+              </svg>
+            </div>
+              <div class="footer-brand-text">
+              <div class="footer-brand-name">Dave Towing</div>
+              <div class="footer-brand-tagline">Fast, Reliable, Local</div>
+            </div>
+          </div>
+          <p class="footer-brand-description">
+            Dave Towing is your trusted partner for emergency towing and roadside assistance in Maple Grove, dedicated to reliability and customer satisfaction.
+          </p>
+        </div>
+
+        <div class="footer-links">
+          <h4 class="footer-links-title">Quick Links</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="services/service-template.html" class="footer-link">Services</a></li>
+            <li><a href="contact.html" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-services">
+          <h4 class="footer-services-title">Our Services</h4>
+          <ul class="footer-services-list">
+            <li>Light Duty Towing</li>
+            <li>Tire Change</li>
+            <li>Lockout</li>
+            <li>Fuel Delivery</li>
+            <li>{{PROMPT: Write the fifth included service name from the services list, or a relevant fifth service.}}</li>
+            <li>{{PROMPT: Write the sixth included service name from the services list, or a relevant sixth service.}}</li>
+          </ul>
+        </div>
+
+        <div class="footer-contact">
+          <h4 class="footer-contact-title">Contact Information</h4>
+          <div class="footer-contact-info">
+            <div class="footer-contact-item">
+              <svg class="footer-contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+              </svg>
+              <div class="footer-contact-details">
+                <div class="footer-contact-label">Call Us Anytime</div>
+                <a href="tel:(161) 271-5678" class="footer-contact-value">(161) 271-5678</a>
+              </div>
+            </div>
+            <div class="footer-contact-item">
+              <svg class="footer-contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                <polyline points="22,6 12,13 2,6" />
+              </svg>
+              <div class="footer-contact-details">
+                <div class="footer-contact-label">Email Us</div>
+                <a href="mailto:fustdavid42@gmail.com" class="footer-contact-value">fustdavid42@gmail.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copyright">
+          © <span id="current-year"></span> Dave Towing. All Rights Reserved.
+        </p>
+        <div class="footer-legal">
+          <a href="#" class="footer-legal-link">Privacy Policy</a>
+          <a href="#" class="footer-legal-link">Terms of Service</a>
+          <a href="#" class="footer-legal-link">Disclaimer</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Google Maps API -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD9OAUtjT_xm9R5ETIx14GroppEauXZ9Xw&libraries=places"></script>
+  <script>
+      // Initialize Google Map centered on the service city
+      function initMap() {
+          const city = 'Maple Grove';
+          const state = 'MN';
+          const locationQuery = state ? `${city}, ${state}` : city;
+          
+          // Use Geocoding API to get coordinates for the city
+          const geocoder = new google.maps.Geocoder();
+          
+          geocoder.geocode({ address: locationQuery }, function(results, status) {
+              if (status === 'OK' && results[0]) {
+                  const location = results[0].geometry.location;
+                  
+                  const map = new google.maps.Map(document.getElementById('map'), {
+                      center: location,
+                      zoom: 12,
+                      styles: [
+                          {
+                              featureType: 'poi',
+                              elementType: 'labels',
+                              stylers: [{ visibility: 'off' }]
+                          }
+                      ]
+                  });
+                  
+                  // Add a marker for the city center
+                  new google.maps.Marker({
+                      position: location,
+                      map: map,
+                      title: `Service Area: ${locationQuery}`
+                  });
+              } else {
+                  // Fallback: try to use a default location if geocoding fails
+                  console.warn('Geocoding failed, using default location');
+                  const map = new google.maps.Map(document.getElementById('map'), {
+                      center: { lat: 39.7392, lng: -104.9903 }, // Default to Denver
+                      zoom: 10
+                  });
+              }
+          });
+      }
+      
+      // Initialize map when page loads
+      if (typeof google !== 'undefined' && google.maps) {
+          initMap();
+      } else {
+          // Wait for Google Maps API to load
+          window.addEventListener('load', function() {
+              if (typeof google !== 'undefined' && google.maps) {
+                  initMap();
+              }
+          });
+      }
+  </script>
+  <script src="script.js"></script>
+    </body>
+  </html>
+  
