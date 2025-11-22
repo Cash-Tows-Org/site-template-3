@@ -80,7 +80,7 @@
           display: inline-flex;
           align-items: center;
           gap: 0.5rem;
-          background-color: var(--primary-color);
+          background-color: var(--accent-color);
           color: white;
           padding: 0.75rem 1.5rem;
           border-radius: 0.5rem;
@@ -101,9 +101,9 @@
           color: white;
       }
       
-      /* Navbar accent color */
-      header.bg-accent {
-          background-color: var(--accent-color) !important;
+      /* Navbar primary color */
+      header.bg-primary {
+          background-color: var(--primary-color) !important;
       }
   </style>
   <link rel="stylesheet" href="assets/css/shared.css">
@@ -111,7 +111,7 @@
     </head>
 <body>
     <!-- ===== START: HEADER ===== -->
-    <header class="bg-accent shadow-lg sticky top-0 z-50">
+    <header class="bg-primary shadow-lg sticky top-0 z-50">
         <div class="container mx-auto px-4 py-5 flex justify-between items-center">
             <div class="text-xl md:text-2xl font-bold text-white">
                 {{BUSINESS_NAME}}
@@ -145,7 +145,7 @@
                 </ul>
             </nav>
             <div class="hidden md:block">
-                <a href="tel:{{PHONE_NUMBER}}" class="bg-primary text-white px-4 md:px-6 py-2 md:py-3 rounded-lg font-semibold hover:bg-white hover:text-accent transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-105 text-sm md:text-base">
+                <a href="tel:{{PHONE_NUMBER}}" class="bg-accent text-white px-4 md:px-6 py-2 md:py-3 rounded-lg font-semibold hover:bg-white hover:text-accent transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-105 text-sm md:text-base">
                     {{PROMPT: Write call-to-action button text. Use unique wording that differs from other pages.}}
                 </a>
             </div>
@@ -155,7 +155,7 @@
                 </svg>
             </button>
         </div>
-        <div class="mobile-menu md:hidden bg-accent py-6 px-4 shadow-lg border-t border-accent/20 hidden">
+        <div class="mobile-menu md:hidden bg-primary py-6 px-4 shadow-lg border-t border-primary/20 hidden">
             <ul class="space-y-5">
                 <li>
                     <a href="index.html" class="block text-white hover:text-white/80 font-medium text-lg transition-colors">
@@ -169,7 +169,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="tel:{{PHONE_NUMBER}}" class="block bg-primary text-white px-6 py-3 rounded-lg text-center font-semibold hover:bg-white hover:text-accent transition-all duration-300 shadow-md">
+                    <a href="tel:{{PHONE_NUMBER}}" class="block bg-accent text-white px-6 py-3 rounded-lg text-center font-semibold hover:bg-white hover:text-accent transition-all duration-300 shadow-md">
                         {{PROMPT: Write call-to-action button text. Use unique wording that differs from other pages.}}
                     </a>
                 </li>
@@ -672,12 +672,7 @@
         <div class="footer-services">
           <h4 class="footer-services-title">{{PROMPT: Write footer section title for services (e.g., "Our Services", "Services We Offer", "Available Services").}}</h4>
           <ul class="footer-services-list">
-            <li>{{PROMPT: Write the first included service name from the services list (e.g., "Jump Start", "Fuel Delivery", "Lockout").}}</li>
-            <li>{{PROMPT: Write the second included service name from the services list (e.g., "Jump Start", "Fuel Delivery", "Lockout").}}</li>
-            <li>{{PROMPT: Write the third included service name from the services list, or a relevant third service if only two are included.}}</li>
-            <li>{{PROMPT: Write the fourth included service name from the services list, or a relevant fourth service.}}</li>
-            <li>{{PROMPT: Write the fifth included service name from the services list, or a relevant fifth service.}}</li>
-            <li>{{PROMPT: Write the sixth included service name from the services list, or a relevant sixth service.}}</li>
+            <!-- FOOTER_SERVICE_ITEMS -->
           </ul>
         </div>
 
